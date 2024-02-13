@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/wonder_wood_react/static/css/main.243e9c96.css",
-    "main.js": "/wonder_wood_react/static/js/main.4b7580cc.js",
+    "main.js": "/wonder_wood_react/static/js/main.e79c3072.js",
     "index.html": "/wonder_wood_react/index.html",
     "main.243e9c96.css.map": "/wonder_wood_react/static/css/main.243e9c96.css.map",
-    "main.4b7580cc.js.map": "/wonder_wood_react/static/js/main.4b7580cc.js.map"
+    "main.e79c3072.js.map": "/wonder_wood_react/static/js/main.e79c3072.js.map"
   },
   "entrypoints": [
     "static/css/main.243e9c96.css",
-    "static/js/main.4b7580cc.js"
+    "static/js/main.e79c3072.js"
   ]
 }
