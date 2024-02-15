@@ -1,3 +1,44 @@
-.container {
-  font-size: 50px;
+.banner { 
+  background: rgba(96, 155, 170, 0.07);
+
+  &_container {
+    display: flex;
+    align-items: center;
+    padding: 200px 0 45px;  
+  }
+
+  &_info {
+    margin-left: calc(8.33333% + 0.9375rem);
+    width: calc(50% - 3.875rem);
+
+    &-text {
+      font-weight: 500;
+      font-size: 20px;
+      color: #727272;
+    }
+
+    &-title {
+      text-transform: uppercase;
+      font-weight: 500;
+      font-size: 36px;
+      line-height: 1.4;
+      margin-top: 18px;
+      margin-bottom: 85px;
+
+      & span {
+        color: #46A358;
+      }
+    }
+  }
+
+  &_photo {
+    margin: 0 15px;
+    width: calc(41.66667% - 1.875rem);
+
+    &-img {
+      transform: scaleX(-1);
+      max-width: 500px;
+      width: 100%;
+    }
+  }
 }

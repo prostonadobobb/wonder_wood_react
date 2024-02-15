@@ -1,9 +1,10 @@
 import { createRoot } from 'react-dom/client';
 import { Root } from './Root';
-import { BrowserRouter } from 'react-router-dom/dist';
+import { HashRouter } from 'react-router-dom/dist';
+import 'normalize.css'
 
 createRoot(document.getElementById('root')).render(
-  <BrowserRouter>
+  <HashRouter>
     <Root />
-  </BrowserRouter>
+  </HashRouter>
 );

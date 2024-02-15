@@ -1,7 +1,13 @@
+import React from 'react';
 import './Footer.scss';
 
-export const Footer = () => {
+export const Footer = ({item, Increment}) => {
+  
   return (
-    <div>Footer</div>
+    <section className="footer">
+      Footer
+    </section>
   );
 };
+
+export default Footer;
