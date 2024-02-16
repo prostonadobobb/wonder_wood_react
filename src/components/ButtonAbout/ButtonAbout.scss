@@ -1,0 +1,23 @@
+.button_desc {
+  outline: none;
+  text-align: center;
+  cursor: pointer;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1;
+  transition: .35s;
+  box-shadow: 0px 10px 30px -4px rgba(10, 19, 40, 0.39);
+  transform: skew(-8deg);
+  padding: 10px 30px;
+  font-size: 16px;
+  color: #46A358;
+  border: 2px solid #46A358;
+  border-radius: 2px 20px 2px 20px;
+  background-color: #fff;
+
+  &:hover {
+    z-index: 1;
+    box-shadow: 0px 10px 30px -4px rgba(96, 155, 170, 0.9);
+    transform: scale(1.04) skew(-12deg);
+  }
+}

@@ -1,6 +1,6 @@
 import './Button.scss';
 
-export const Button = ({title}) => {
+export const Button = ({ title }) => {
   return (
     <button className="button">
       {title}

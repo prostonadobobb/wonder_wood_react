@@ -42,3 +42,27 @@
     }
   }
 }
+
+.cards {
+  padding: 80px 0;
+  
+  &_list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+  }
+
+  &_container {
+    max-width: 60rem;
+    margin: 0 auto;
+  }
+
+  &_title {
+    font-weight: 600;
+    font-size: 20px;
+    margin-bottom: 50px;
+    border-bottom: 1px solid rgba(70, 163, 88, 0.5);
+    padding-bottom: 12px;
+    color: #46A358;
+  }
+}

@@ -1,8 +1,13 @@
+
 import { Button } from '../../Button/Button';
+import { Card } from '../../Card/Card';
 import './HomePage.scss';
 import banner_img from './HomePageImg/jumb-shelv.png';
 
+
+
 export const HomePage = () => {
+
   return (
     <section className='home'>
  
@@ -24,8 +29,18 @@ export const HomePage = () => {
             </div>
           </div>
         </div>
-        
+      </section>
       
+      <section className="cards">
+        <div className="cards_container">
+          <div className="cards_title">
+              Стелаж WonderWood
+          </div>
+          <div className="cards_list">       
+              <Card />
+              <Card />
+          </div>
+        </div>
       </section>
       
     </section>

@@ -11,6 +11,14 @@
   padding: 1.25rem 4.0625rem;
   border-radius: 20px 2px 20px 2px;
   transform: skew(-8deg);
-  background-color: #46A358;
   color: #fff;
+  background-color: #46A358;
+  border: 2px solid #46A358;
+
+  &:hover {
+    border-radius: 2px 20px 2px 20px;
+    box-shadow: 0px 10px 30px -4px rgba(96, 155, 170, 0.9);
+    transform: scale(1.04) skew(-12deg);
+    background-color: #377f45;
+  }
 }
