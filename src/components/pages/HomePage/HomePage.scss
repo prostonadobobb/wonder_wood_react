@@ -31,6 +31,10 @@
     }
   }
 
+  &_button {
+    width: fit-content;
+  }
+
   &_photo {
     margin: 0 15px;
     width: calc(41.66667% - 1.875rem);
@@ -44,8 +48,9 @@
 }
 
 .cards {
+  position: relative;
   padding: 80px 0;
-  
+
   &_list {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -53,7 +58,6 @@
   }
 
   &_container {
-    max-width: 60rem;
     margin: 0 auto;
   }
 
@@ -64,5 +68,91 @@
     border-bottom: 1px solid rgba(70, 163, 88, 0.5);
     padding-bottom: 12px;
     color: #46A358;
+  }
+
+  &:before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 0;
+    bottom: 0;
+    transform: translateX(-50%);
+    border-right: 1px dashed rgba(221, 222, 223, 0.6);
+  }
+}
+
+.callback {
+  background: rgba(96, 155, 170, 0.07); 
+  padding: 60px 0;
+
+  &_container {
+    max-width: 500px;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  &_title {
+    font-size: 22px;
+    font-weight: 500;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+
+    & span {
+      color: #46A358;
+      font-weight: 600;
+    }
+  }
+}
+
+.about {
+    background: url(./HomePageImg/about-bg.png) right center no-repeat;
+    background-size: contain;
+    position: relative;
+    overflow: hidden;
+    padding-top: 80px;
+    padding-bottom: 80px;
+
+  &_title {
+    font-weight: 600;
+    font-size: 20px;
+    margin-bottom: 50px;
+    border-bottom: 1px solid rgba(70, 163, 88, 0.5);
+    padding-bottom: 12px;
+    color: #46A358;
+  }
+
+  &_lists {
+    display: flex;
+    margin-left: calc(8.33333% + 0.9375rem);
+  }
+
+  &_list {
+    width: calc(50% - 1.875rem);
+    font-weight: 500;
+  }
+
+  &_item {
+    position: relative;
+    display: flex;
+    align-items: center;
+    min-height: 75px;
+    padding-left: 100px;
+    font-size: 20px;
+
+    & + & {
+      margin-top: 24px;
+  }
+
+    &:before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 75px;
+      height: 75px;
+      background: url(./HomePageImg/icon-advantage.svg);
+      background-size: contain;
+    }
   }
 }
