@@ -1,17 +1,19 @@
 {
   "files": {
-    "main.css": "./static/css/main.4b8f44cb.css",
-    "main.js": "./static/js/main.e6be3387.js",
+    "main.css": "./static/css/main.e20b11ab.css",
+    "main.js": "./static/js/main.df942e5f.js",
     "static/media/jumb-shelv.png": "./static/media/jumb-shelv.a6a4f71dec0d2899e33a.png",
+    "static/media/about-bg.png": "./static/media/about-bg.f401d81a98d9bc330986.png",
     "static/media/logo.png": "./static/media/logo.50584c5a81bfde322c5e.png",
     "static/media/icon-home.svg": "./static/media/icon-home.78c6e0130d97818e36a1250201d74f20.svg",
+    "static/media/icon-advantage.svg": "./static/media/icon-advantage.c614f7a8035ae7765078.svg",
     "static/media/icon-phone.svg": "./static/media/icon-phone.949a1dc4f42a8c1b03c64843419befeb.svg",
     "index.html": "./index.html",
-    "main.4b8f44cb.css.map": "./static/css/main.4b8f44cb.css.map",
-    "main.e6be3387.js.map": "./static/js/main.e6be3387.js.map"
+    "main.e20b11ab.css.map": "./static/css/main.e20b11ab.css.map",
+    "main.df942e5f.js.map": "./static/js/main.df942e5f.js.map"
   },
   "entrypoints": [
-    "static/css/main.4b8f44cb.css",
-    "static/js/main.e6be3387.js"
+    "static/css/main.e20b11ab.css",
+    "static/js/main.df942e5f.js"
   ]
 }
