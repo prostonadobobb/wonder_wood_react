@@ -11,7 +11,7 @@ export const RackCard = () => {
       <div className="product_container">
         
         <div className='product_img'>
-          <img src={`/img/RackImg${products[0].images[0]}`} alt="img_item" />
+          <img src={`img/RackImg${products[0].images[0]}`} alt="img_item" />
         </div>
 
         <div className="product_title">стелаж T1</div>

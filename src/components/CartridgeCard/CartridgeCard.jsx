@@ -11,7 +11,7 @@ export const CartridgeCard = ({ cartridge }) => {
         
         <img 
           className='cartridge_img' 
-          src={`/img/CartridgesImg${cartridge.images[0]}`} 
+          src={`img/CartridgesImg${cartridge.images[0]}`} 
           alt="img_item" 
         />
         
