@@ -10,6 +10,8 @@ import instruction_image from './HomePageImg/t2-instruction.png';
 import advantage_1 from './HomePageImg/advantage1.svg';
 import advantage_2 from './HomePageImg/advantage2.svg';
 import advantage_3 from './HomePageImg/advantage3.svg';
+import t1_upsell from './HomePageImg/t1_upsell.png';
+import t2_upsell from './HomePageImg/t2_upsell.png';
 
 
 
@@ -122,55 +124,87 @@ export const HomePage = () => {
 
       <section className="for">
         <div className="container">
-          <div className="for__advantages">
+          <div className="for__container">
+            <div className="for__advantages">
+              <div className="for__advantage">
+                <div className="for__advantage-image">
+                  <img src={advantage_1} alt="advantage" />
+                </div>
+                <div className="for__advantage-title">
+                  Для дому
+                </div>
+                <div className="for__advantage-text">
+                  Декоративний стелаж WonderWood ідеально підійде, щоб доповнити інтер'єр, а також ви завжди зможете посмакувати соковиту Мікрозелень, яку так легко виростити разом з нами.
+                </div>
+              </div>
 
-            <div className="for__advantage">
-              <div className="for__advantage-image">
-                <img src={advantage_1} alt="advantage" />
+              <div className="for__advantage">
+                <div className="for__advantage-image">
+                  <img src={advantage_2} alt="advantage" />
+                </div>
+                <div className="for__advantage-title">
+                  Для закладу
+                </div>
+                <div className="for__advantage-text">
+                Хочете здивувати своїх відвідувачів? Наш стелаж для мікрозелені допоможе це зробити. Встановіть на барі, столиках або замовте індивідуальне гравіювання.
+                </div>
               </div>
-              <div className="for__advantage-title">
-                Для дому
-              </div>
-              <div className="for__advantage-text">
-                Декоративний стелаж WonderWood ідеально підійде, щоб доповнити інтер'єр, а також ви завжди зможете посмакувати соковиту Мікрозелень, яку так легко виростити разом з нами.
+
+              <div className="for__advantage">
+                <div className="for__advantage-image">
+                  <img src={advantage_3} alt="advantage" />
+                </div>
+                <div className="for__advantage-title">
+                  Для офісу
+                </div>
+                <div className="for__advantage-text">
+                  Зробити затишний куток прямо на робочому місці можна за допомогою стелажа microgreen. Доповніть робоче місце та куштуйте свіжу мікрозелень під час кожного перекусу.
+                </div>
               </div>
             </div>
 
-            <div className="for__advantage">
-              <div className="for__advantage-image">
-                <img src={advantage_2} alt="advantage" />
+            <div className="for__info">
+              <div className="for__info-title">Чи важко вирощувати <span>microgreen?</span></div>
+              <div className="for__info-text">
+                Ми витратили багато часу та провели безліч експериментів для того, щоб зробити процес вирощування мікрозелені максимально простим. Це нам вдалося досягти за допомогою одноразових картриджів WonderWood. Тепер кожен зможе із задоволенням та з мінімальними зусиллями виростити смачний та соковитий microgreen.
               </div>
-              <div className="for__advantage-title">
-                Для закладу
-              </div>
-              <div className="for__advantage-text">
-              Хочете здивувати своїх відвідувачів? Наш стелаж для мікрозелені допоможе це зробити. Встановіть на барі, столиках або замовте індивідуальне гравіювання.
-              </div>
+              <Button title={'Переглянути стелажі'}/>
             </div>
+          </div>  
+        </div>
+      </section>
+      
+      <section className="upsell">
+        <div className="container upsell__container">
+        <div className="upsell__card">
 
-            <div className="for__advantage">
-              <div className="for__advantage-image">
-                <img src={advantage_3} alt="advantage" />
-              </div>
-              <div className="for__advantage-title">
-                Для офісу
-              </div>
-              <div className="for__advantage-text">
-                Зробити затишний куток прямо на робочому місці можна за допомогою стелажа microgreen. Доповніть робоче місце та куштуйте свіжу мікрозелень під час кожного перекусу.
-              </div>
+            <div className="upsell__image">
+              <img src={t1_upsell} alt="T1" />
             </div>
-
+            <div className="upsell__info">
+              <div className="upsell__title">стелаж t1</div>
+              <div className="upsell__text">
+                Ідеально підходить для тих, хто тільки хоче познайомитися з мікрозеленню та виростити свою першу культуру
+              </div>
+              <Button title={'Замовити'} />
+            </div>
+            
           </div>
-          <div className="for__info">
-            <div className="for__info-title">Чи важко вирощувати <span>microgreen?</span></div>
-            <div className="for__info-text">
-              Ми витратили багато часу та провели безліч експериментів для того, щоб зробити процес вирощування мікрозелені максимально простим. Це нам вдалося досягти за допомогою одноразових картриджів WonderWood. Тепер кожен зможе із задоволенням та з мінімальними зусиллями виростити смачний та соковитий microgreen.
+
+          <div className="upsell__card">
+            <div className="upsell__image">
+              <img src={t2_upsell} alt="T1" />
             </div>
-            <Button title={'Переглянути стелажі'}/>
+            <div className="upsell__info">
+              <div className="upsell__title">стелаж t2</div>
+              <div className="upsell__text">
+              Хочете одразу вирощувати та смакувати декілька microgreen одночасно? <br /> Тоді стелаж Т2 саме для Вас
+              </div>
+              <Button title={'Замовити'} />
+            </div>
           </div>
         </div>
       </section>
-              
     </section>
   );
 };
