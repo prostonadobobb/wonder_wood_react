@@ -1,9 +1,9 @@
 
-import cartridges from '../../../api/cartridges';
-import { Button } from '../../Button/Button';
-import { ButtonPlay } from '../../ButtonPlay/ButtonPlay';
-import { CartridgeCard } from '../../CartridgeCard/CartridgeCard';
-import { RackCard } from '../../RackCard/RackCard';
+import cartridges from '../../api/cartridges';
+import { Button } from '../../components/Button/Button';
+import { ButtonPlay } from '../../components/ButtonPlay/ButtonPlay';
+import { CartridgeCard } from '../../components/CartridgeCard/CartridgeCard';
+import { RackCard } from '../../components/RackCard/RackCard';
 import './HomePage.scss';
 import banner_img from './HomePageImg/jumb-shelv.png';
 import instruction_image from './HomePageImg/t2-instruction.png';
