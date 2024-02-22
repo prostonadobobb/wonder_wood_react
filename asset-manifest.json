@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "./static/css/main.6d6b5e6e.css",
-    "main.js": "./static/js/main.297e745f.js",
+    "main.js": "./static/js/main.874cc2d9.js",
     "static/media/t2-instruction.png": "./static/media/t2-instruction.83aa59524a92042d73f0.png",
     "static/media/jumb-shelv.png": "./static/media/jumb-shelv.a6a4f71dec0d2899e33a.png",
     "static/media/about-bg.png": "./static/media/about-bg.f401d81a98d9bc330986.png",
@@ -16,10 +16,10 @@
     "index.html": "./index.html",
     "static/media/icon-arrowSolid_right.svg": "./static/media/icon-arrowSolid_right.0f159db3644dd825f34fe3fcd8d72894.svg",
     "main.6d6b5e6e.css.map": "./static/css/main.6d6b5e6e.css.map",
-    "main.297e745f.js.map": "./static/js/main.297e745f.js.map"
+    "main.874cc2d9.js.map": "./static/js/main.874cc2d9.js.map"
   },
   "entrypoints": [
     "static/css/main.6d6b5e6e.css",
-    "static/js/main.297e745f.js"
+    "static/js/main.874cc2d9.js"
   ]
 }
