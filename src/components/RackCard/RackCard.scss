@@ -1,0 +1,45 @@
+.product {
+  width: 100%;
+  padding: 0 15px;
+  
+  &_img {
+    text-align: center;
+    padding: 35px 15px;
+    background: rgba(96, 155, 170, 0.07);
+    border-radius: 15px;
+
+    & img {
+      height: 320px;
+    }
+  }
+
+  &_title {
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 1.6;
+    margin-top: 35px;
+    text-transform: uppercase;
+  }
+
+  &_description {
+    font-weight: 500;
+    margin-top: 5px;
+    line-height: 1.6;
+    color: #727272;
+  }
+
+  &_control {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    line-height: 1.6;
+    margin-top: 25px;
+  }
+
+  &_price {
+    font-weight: 600;
+    font-size: 36px;
+  }
+}
+
+

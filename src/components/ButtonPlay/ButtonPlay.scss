@@ -1,0 +1,36 @@
+.button_play {
+  position: absolute;
+    z-index: 1;
+    padding: 0;
+    margin-left: 0;
+    left: 50%;
+    top: 45%;
+    background: #fff;
+    transform: translate(-50%, -50%);
+    width: 82px;
+    height: 82px;
+    border-radius: 50%;
+    line-height: 0;
+    box-shadow: 0px 10px 30px -4px rgba(10, 19, 40, 0.39);
+    transition: .35s;
+    outline: none;
+    border: none;
+    text-align: center;
+    cursor: pointer;
+
+    &:hover {
+      transform: translate(-50%, -50%) scale(1.1) rotate(225deg);
+      z-index: 1;
+      border-radius: 2px 20px 2px 20px;
+      box-shadow: 0px 10px 30px -4px rgba(96, 155, 170, 0.9);
+
+      & img {
+        transform: rotate(255deg);
+      }
+    }
+
+    & img {
+      width: 30px;
+      padding-left: 5px;
+    }
+}

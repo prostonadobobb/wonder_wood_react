@@ -1,8 +1,15 @@
 
+import cartridges from '../../../api/cartridges';
 import { Button } from '../../Button/Button';
-import { Card } from '../../Card/Card';
+import { ButtonPlay } from '../../ButtonPlay/ButtonPlay';
+import { CartridgeCard } from '../../CartridgeCard/CartridgeCard';
+import { RackCard } from '../../RackCard/RackCard';
 import './HomePage.scss';
 import banner_img from './HomePageImg/jumb-shelv.png';
+import instruction_image from './HomePageImg/t2-instruction.png';
+import advantage_1 from './HomePageImg/advantage1.svg';
+import advantage_2 from './HomePageImg/advantage2.svg';
+import advantage_3 from './HomePageImg/advantage3.svg';
 
 
 
@@ -13,21 +20,21 @@ export const HomePage = () => {
  
       <section className="banner">
         <div className="container">
-          <div className="banner_container">
-            <div className="banner_info">
-              <div className="banner_info-text">
+          <div className="banner__container">
+            <div className="banner__info">
+              <div className="banner__info-text">
                 Твій майбутній домашній сад вже чекає на тебе
               </div>
-              <h1 className="banner_info-title">
+              <h1 className="banner__info-title">
                 Вирощуйте мікрозелень у себе дома за допомогою стелажа <span>Wonderwood</span>
               </h1>
-              <div className="banner_button">
+              <div className="banner__button">
                 <Button title={'Детальніше'} />
               </div>
             </div>
 
-            <div className="banner_photo">
-              <img src={banner_img} alt="banner-img" className="banner_photo-img" />
+            <div className="banner__photo">
+              <img src={banner_img} alt="banner-img" className="banner__photo-img" />
             </div>
           </div>
         </div>
@@ -35,13 +42,13 @@ export const HomePage = () => {
 
       <section className="cards">
         <div className="container">
-          <div className="cards_container">
-            <div className="cards_title">
+          <div className="cards__container">
+            <div className="cards__title">
                 Стелаж WonderWood
             </div>
-            <div className="cards_list">       
-                <Card />
-                <Card />
+            <div className="cards__list">       
+                <RackCard />
+                <RackCard />
             </div>
           </div>
         </div>
@@ -49,8 +56,8 @@ export const HomePage = () => {
 
       <section className="callback">
         <div className="container">
-          <div className="callback_container">
-            <div className="callback_title">
+          <div className="callback__container">
+            <div className="callback__title">
               замовити <span>безкоштовну</span> консультацію
             </div>
             <Button title={"Зворотній зв'язок"}/>
@@ -61,27 +68,109 @@ export const HomePage = () => {
       
       <section className="about">
         <div className="container">
-          <div className="about_title">
+          <div className="about__title">
             WonderWood Microgreen - це:
           </div>
-          <div className="about_lists">
-            <ul className="about_list">
-              <li className="about_item">Органічний продукт</li>
-              <li className="about_item">Різноманітність смаків</li>
-              <li className="about_item">Корисні властивості</li>
-              <li className="about_item">Компактність</li>
-              <li className="about_item">Легкість вирощування</li>
+          <div className="about__lists">
+            <ul className="about__list">
+              <li className="about__item">Органічний продукт</li>
+              <li className="about__item">Різноманітність смаків</li>
+              <li className="about__item">Корисні властивості</li>
+              <li className="about__item">Компактність</li>
+              <li className="about__item">Легкість вирощування</li>
             </ul>
-            <ul className="about_list">
-              <li className="about_item">Швидка продуктивність</li>
-              <li className="about_item">Максимальна харчова цінність</li>
-              <li className="about_item">Оздоровлюючі здібності</li>
-              <li className="about_item">Комплекс вітамінів та мінералів</li>
-              <li className="about_item">Всесезонність</li>
+            <ul className="about__list">
+              <li className="about__item">Швидка продуктивність</li>
+              <li className="about__item">Максимальна харчова цінність</li>
+              <li className="about__item">Оздоровлюючі здібності</li>
+              <li className="about__item">Комплекс вітамінів та мінералів</li>
+              <li className="about__item">Всесезонність</li>
             </ul>
           </div>       
         </div>
       </section>
+
+      <section className="instruction">
+        <div className="container">
+          <div className="instruction__container">
+            <div className="instruction__info">
+              <div className='instruction__title'>
+                Вирощувати дуже легко Відео-<span>Інструкція</span>
+              </div>
+              <div className="instruction__text">
+                Для твого домашнього сада достатньо запам'ятати пару простих кроків за допомогою нашої інструкції
+              </div>
+              <ButtonPlay />
+            </div>
+
+            <div className="instruction__image">
+              <img src={instruction_image} alt="instruction-img" />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="cartridges"> 
+        <div className="container">
+          <div className="cartridges__container">
+            {cartridges.map(cartridge => (
+              <CartridgeCard cartridge={cartridge} key={cartridge.id} />
+            ))}  
+          </div>
+        </div>
+      </section>
+
+      <section className="for">
+        <div className="container">
+          <div className="for__advantages">
+
+            <div className="for__advantage">
+              <div className="for__advantage-image">
+                <img src={advantage_1} alt="advantage" />
+              </div>
+              <div className="for__advantage-title">
+                Для дому
+              </div>
+              <div className="for__advantage-text">
+                Декоративний стелаж WonderWood ідеально підійде, щоб доповнити інтер'єр, а також ви завжди зможете посмакувати соковиту Мікрозелень, яку так легко виростити разом з нами.
+              </div>
+            </div>
+
+            <div className="for__advantage">
+              <div className="for__advantage-image">
+                <img src={advantage_2} alt="advantage" />
+              </div>
+              <div className="for__advantage-title">
+                Для закладу
+              </div>
+              <div className="for__advantage-text">
+              Хочете здивувати своїх відвідувачів? Наш стелаж для мікрозелені допоможе це зробити. Встановіть на барі, столиках або замовте індивідуальне гравіювання.
+              </div>
+            </div>
+
+            <div className="for__advantage">
+              <div className="for__advantage-image">
+                <img src={advantage_3} alt="advantage" />
+              </div>
+              <div className="for__advantage-title">
+                Для офісу
+              </div>
+              <div className="for__advantage-text">
+                Зробити затишний куток прямо на робочому місці можна за допомогою стелажа microgreen. Доповніть робоче місце та куштуйте свіжу мікрозелень під час кожного перекусу.
+              </div>
+            </div>
+
+          </div>
+          <div className="for__info">
+            <div className="for__info-title">Чи важко вирощувати <span>microgreen?</span></div>
+            <div className="for__info-text">
+              Ми витратили багато часу та провели безліч експериментів для того, щоб зробити процес вирощування мікрозелені максимально простим. Це нам вдалося досягти за допомогою одноразових картриджів WonderWood. Тепер кожен зможе із задоволенням та з мінімальними зусиллями виростити смачний та соковитий microgreen.
+            </div>
+            <Button title={'Переглянути стелажі'}/>
+          </div>
+        </div>
+      </section>
+              
     </section>
   );
 };

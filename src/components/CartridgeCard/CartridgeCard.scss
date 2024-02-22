@@ -1,0 +1,32 @@
+.cartridge {
+  padding: 50px 30px;
+  display: inline-block;
+
+  &_img {
+    display: block;
+    height: 200px;
+  }
+
+  &_head {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+  }
+
+  &_title,
+  &_price {
+    font-weight: 600;
+    text-transform: uppercase;
+  }
+
+  &_buttons {
+    margin-top: 10px;
+    display: flex;
+
+    & button {
+      padding: 7px 20px;
+      font-size: 14px;
+      flex: 1;
+    }
+  }
+}

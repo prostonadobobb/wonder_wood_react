@@ -3,9 +3,9 @@ export const products = [
     id: 1, 
     name: 'T1', 
     images: [
-      'img/t1-pdp1.png',
-      'img/t1-pdp2.png',
-      'img/t1-pdp3.png',
+      '/t1-pdp1.png',
+      '/t1-pdp2.png',
+      '/t1-pdp3.png',
     ],
     description: 'Одне відділення під картридж із мікрозеленню',
   },
@@ -13,9 +13,9 @@ export const products = [
     id: 2, 
     name: 'T1', 
     images: [
-      'img/t2-pdp1',
-      'img/t3-pdp2',
-      'img/t4-pdp3',
+      '/t2-pdp1.png',
+      '/t3-pdp2.png',
+      '/t4-pdp3.png',
     ],
     description: 'Два відділення під картридж із мікрозеленню',
   }
