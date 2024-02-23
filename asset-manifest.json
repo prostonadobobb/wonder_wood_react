@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "./static/css/main.e321e5e5.css",
-    "main.js": "./static/js/main.0c2167f0.js",
+    "main.css": "./static/css/main.638f0cf8.css",
+    "main.js": "./static/js/main.163e2298.js",
     "static/media/t2-instruction.png": "./static/media/t2-instruction.83aa59524a92042d73f0.png",
     "static/media/t1_upsell.png": "./static/media/t1_upsell.ee87d4b39ef142a7bbb2.png",
     "static/media/jumb-shelv.png": "./static/media/jumb-shelv.a6a4f71dec0d2899e33a.png",
@@ -12,17 +12,22 @@
     "static/media/advantage1.svg": "./static/media/advantage1.878ea61cc4254b427d9e9ca2b65066ec.svg",
     "static/media/advantage3.svg": "./static/media/advantage3.87128a27412ffba1e9cc20a5346ae746.svg",
     "static/media/advantage2.svg": "./static/media/advantage2.737e282d2822b3f06f1a15265cec31a3.svg",
+    "static/media/icon-tiktok.svg": "./static/media/icon-tiktok.1fd9cbff719bbafedb99124431697db0.svg",
     "static/media/icon-home.svg": "./static/media/icon-home.78c6e0130d97818e36a1250201d74f20.svg",
+    "static/media/icon-youtube.svg": "./static/media/icon-youtube.3e3a3669a4099bca7c60df03e4358713.svg",
+    "static/media/icon-facebook.svg": "./static/media/icon-facebook.7993d1e4354af0f9f4560687818abff8.svg",
     "static/media/icon-advantage.svg": "./static/media/icon-advantage.c614f7a8035ae7765078.svg",
+    "static/media/icon-instagram.svg": "./static/media/icon-instagram.e5adfa9ef0e2dd7ec2673eb17a078939.svg",
     "static/media/icon-phone.svg": "./static/media/icon-phone.949a1dc4f42a8c1b03c64843419befeb.svg",
     "index.html": "./index.html",
+    "static/media/icon-leaf.svg": "./static/media/icon-leaf.6a44ea2a6117b1502785.svg",
     "static/media/circle-decor.svg": "./static/media/circle-decor.c62ccd799c8889e683ee.svg",
     "static/media/icon-arrowSolid_right.svg": "./static/media/icon-arrowSolid_right.0f159db3644dd825f34fe3fcd8d72894.svg",
-    "main.e321e5e5.css.map": "./static/css/main.e321e5e5.css.map",
-    "main.0c2167f0.js.map": "./static/js/main.0c2167f0.js.map"
+    "main.638f0cf8.css.map": "./static/css/main.638f0cf8.css.map",
+    "main.163e2298.js.map": "./static/js/main.163e2298.js.map"
   },
   "entrypoints": [
-    "static/css/main.e321e5e5.css",
-    "static/js/main.0c2167f0.js"
+    "static/css/main.638f0cf8.css",
+    "static/js/main.163e2298.js"
   ]
 }
