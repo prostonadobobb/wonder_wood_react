@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "./static/css/main.9ab2f92e.css",
-    "main.js": "./static/js/main.ae859757.js",
+    "main.css": "./static/css/main.36cbc9d4.css",
+    "main.js": "./static/js/main.fd345d79.js",
     "static/media/t2-instruction.png": "./static/media/t2-instruction.83aa59524a92042d73f0.png",
     "static/media/t1_upsell.png": "./static/media/t1_upsell.ee87d4b39ef142a7bbb2.png",
     "static/media/jumb-shelv.png": "./static/media/jumb-shelv.a6a4f71dec0d2899e33a.png",
@@ -23,11 +23,11 @@
     "static/media/icon-leaf.svg": "./static/media/icon-leaf.6a44ea2a6117b1502785.svg",
     "static/media/circle-decor.svg": "./static/media/circle-decor.c62ccd799c8889e683ee.svg",
     "static/media/icon-arrowSolid_right.svg": "./static/media/icon-arrowSolid_right.0f159db3644dd825f34fe3fcd8d72894.svg",
-    "main.9ab2f92e.css.map": "./static/css/main.9ab2f92e.css.map",
-    "main.ae859757.js.map": "./static/js/main.ae859757.js.map"
+    "main.36cbc9d4.css.map": "./static/css/main.36cbc9d4.css.map",
+    "main.fd345d79.js.map": "./static/js/main.fd345d79.js.map"
   },
   "entrypoints": [
-    "static/css/main.9ab2f92e.css",
-    "static/js/main.ae859757.js"
+    "static/css/main.36cbc9d4.css",
+    "static/js/main.fd345d79.js"
   ]
 }
