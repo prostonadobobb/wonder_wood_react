@@ -11,7 +11,6 @@ export const Header = () => {
   const [openBurger, setOpenBurger] = useState(false);
   const navRef = useRef(null);
   const navbarLinkClass = classNames("navbar__link", {"scroll": isScrolled});
-  console.log(isScrolled, 'isScrolled', openBurger, 'openBurger', navRef);
 
   const handleScroll = useCallback(() => {
     const shouldScroll = window.scrollY > 30;
@@ -29,7 +28,8 @@ export const Header = () => {
   }, [handleScroll]);
   
   const handleClickOutside = useCallback((e) => {
-    if (navRef.current && !navRef.current.contains(e.target)) {
+    console.log(e.target, navRef);
+    if (!navRef.current.contains(e.target)) {
       setOpenBurger(false);
     }
   }, []);

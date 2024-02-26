@@ -1,30 +1,67 @@
 // import Slider from 'react-slick';
 import './RackCard.scss';
-import products from '../../api/products';
 import { ButtonAbout } from '../ButtonAbout/ButtonAbout';
 import { ButtonBuy } from '../ButtonBuy/ButtonBuy';
+import { useEffect, useState } from 'react';
+import classNames from 'classnames';
 
-export const RackCard = () => {
-  
+export const RackCard = ({ product }) => {
+  const [currentImgIndex, setCurrentImgIndex] = useState(0);
+  const BASE_URL = 'img/RackImg';
+
+  const {
+    images,
+    name, 
+    price, 
+    description
+  } = product;
+
+  useEffect(() => {
+    const intervalId = setInterval(() => {
+      setCurrentImgIndex(prevIndex => (prevIndex + 1) % images.length);
+    }, 5000);
+
+    return () => clearInterval(intervalId);
+  }, [images.length]);
+
   return (
     <div className="product">
-      <div className="product_container">
+      <div className="product__container">
         
-        <div className='product_img'>
-          <img src={`img/RackImg${products[0].images[0]}`} alt="img_item" />
+        <div className='product__img-current'>
+          <img src={`${BASE_URL}${images[currentImgIndex]}`} alt="img__item" />
         </div>
 
-        <div className="product_title">стелаж T1</div>
-        <div className="product_description">Одне відділення під картридж із мікрозеленню</div>
+        <div className="product__img-list">
+          {images.map((image, index) => (
+            <button 
+              className={classNames("product__img-btn", {
+                "product__img-btn--active": index === currentImgIndex,
+              })}
+              type='button'
+              key={image}
+              onClick={() => setCurrentImgIndex(index)}
+            >
+              <img 
+                src={`${BASE_URL}${image}`} 
+                alt="product_img" 
+                className="product__img-small" 
+              />
+            </button>
+          ))}
+        </div>
 
-        <div className="product_control">
-          <div className="product_buttons">
+        <div className="product__title">{`стелаж ${name}`}</div>
+        <div className="product__description">{description}</div>
+
+        <div className="product__control">
+          <div className="product__buttons">
             <ButtonAbout title={'Детальніше'} />
             <ButtonBuy title={'Замовити'} />
           </div>
 
-          <div className="product_price">
-            800 ₴
+          <div className="product__price">
+            {`${price} ₴`}
           </div>
         </div>
 

@@ -8,16 +8,18 @@ export const products = [
       '/t1-pdp3.png',
     ],
     description: 'Одне відділення під картридж із мікрозеленню',
+    price: 600,
   },
   {
     id: 2, 
-    name: 'T1', 
+    name: 'T2', 
     images: [
       '/t2-pdp1.png',
-      '/t3-pdp2.png',
-      '/t4-pdp3.png',
+      '/t2-pdp2.png',
+      '/t2-pdp3.png',
     ],
     description: 'Два відділення під картридж із мікрозеленню',
+    price: 800,
   }
 ];
 

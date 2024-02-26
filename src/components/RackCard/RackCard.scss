@@ -2,7 +2,7 @@
   width: 100%;
   padding: 0 15px;
   
-  &_img {
+  &__img-current {
     text-align: center;
     padding: 35px 15px;
     background: rgba(96, 155, 170, 0.07);
@@ -13,22 +13,52 @@
     }
   }
 
-  &_title {
+  &__img-btn {
+    opacity: 0.5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px;
+    width: 45px;
+    cursor: pointer;
+    border: 1px solid hsla(240, 7%, 62%, 1);
+    border-radius: 5px;
+
+    &--active {
+      opacity: 1;
+      transition: opacity 0.5s ease;
+    }
+
+    & + & {
+      margin-left: 10px;
+    }
+  }
+
+  &__img-list {
+    display: flex;
+    padding: 5px 0;
+  }
+
+  &__img-small {
+    height: 30px;
+  }
+
+  &__title {
     font-weight: 500;
     font-size: 24px;
     line-height: 1.6;
-    margin-top: 35px;
+    margin-top: 10px;
     text-transform: uppercase;
   }
 
-  &_description {
+  &__description {
     font-weight: 500;
     margin-top: 5px;
     line-height: 1.6;
     color: #727272;
   }
 
-  &_control {
+  &__control {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -36,7 +66,7 @@
     margin-top: 25px;
   }
 
-  &_price {
+  &__price {
     font-weight: 600;
     font-size: 36px;
   }

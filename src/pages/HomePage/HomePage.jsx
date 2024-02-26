@@ -12,6 +12,7 @@ import advantage_2 from './HomePageImg/advantage2.svg';
 import advantage_3 from './HomePageImg/advantage3.svg';
 import t1_upsell from './HomePageImg/t1_upsell.png';
 import t2_upsell from './HomePageImg/t2_upsell.png';
+import products from '../../api/products';
 
 
 
@@ -48,9 +49,10 @@ export const HomePage = () => {
             <div className="cards__title">
                 Стелаж WonderWood
             </div>
-            <div className="cards__list">       
-                <RackCard />
-                <RackCard />
+            <div className="cards__list">
+              {products.map(product => (
+                <RackCard product={product} key={product.id} />
+              ))}             
             </div>
           </div>
         </div>
