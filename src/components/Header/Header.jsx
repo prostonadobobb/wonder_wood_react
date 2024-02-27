@@ -28,7 +28,6 @@ export const Header = () => {
   }, [handleScroll]);
   
   const handleClickOutside = useCallback((e) => {
-    console.log(e.target, navRef);
     if (!navRef.current.contains(e.target)) {
       setOpenBurger(false);
     }

@@ -1,0 +1,112 @@
+.modalOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 50; 
+  transition: opacity 0.3s ease;
+}
+
+.modalCallback {
+  position: fixed;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: 200;
+  top: 50%;
+  left: 50%;
+  
+  &-entered {
+    opacity: 1;
+  }
+
+  &-exiting {
+   opacity: 1;
+  }
+
+  &__content {
+    position: relative;
+    border-radius: 10px;
+    padding: 25px;
+    width: 100%;
+    z-index: 100;
+    transform: translate(-50%, -50%);
+    border: 2px solid #46A358;
+    max-width: 400px;
+    background: #fff;
+    margin: auto;
+    box-shadow: 0 0 15px 1px rgba(96, 155, 170, 0.5);
+
+  }
+
+  &--entering {
+    opacity: 0;
+  }
+
+  &--entered {
+    transition: opacity 0.3s ease-in-out;
+    opacity: 1;
+  }
+   
+
+  &__title {
+    margin-bottom: 1.25rem;
+    font-size: 1.625rem;
+  }
+
+  &__label {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 0.4375rem;
+    display: block;
+    text-align: left;
+    font-size: 1rem;
+  }
+
+  &__input {
+    border-radius: 3px;
+    width: 100%;
+    border: 2px solid #46A358;
+    transition: 0.5s;
+    padding: 10px 15px;
+
+    &:focus {
+      outline: none;
+      border: 2px solid #46A358;
+      box-shadow: 1px 1px 3px 0px #46A358;
+    }
+  }
+
+  &__close {
+    display: inline-block;
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    background-color: #fff;
+    border: 2px solid #46A358;
+    padding: 10px;
+    transition: 0.3s;
+    border-radius: 50%;
+    line-height: 0;
+    cursor: pointer;
+
+    &:hover {
+      border-color: #46A358;
+      background: #46A358;
+    }
+
+    & svg {
+      width: 10px;
+      height: 10px;
+      transition: 0.3s;
+    }
+  }
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+

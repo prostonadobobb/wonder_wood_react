@@ -1,6 +1,5 @@
-
 import cartridges from '../../api/cartridges';
-import { Button } from '../../components/Button/Button';
+import { ButtonCallback } from '../../components/ButtonCallback/ButtonCallback';
 import { ButtonPlay } from '../../components/ButtonPlay/ButtonPlay';
 import { CartridgeCard } from '../../components/CartridgeCard/CartridgeCard';
 import { RackCard } from '../../components/RackCard/RackCard';
@@ -13,10 +12,12 @@ import advantage_3 from './HomePageImg/advantage3.svg';
 import t1_upsell from './HomePageImg/t1_upsell.png';
 import t2_upsell from './HomePageImg/t2_upsell.png';
 import products from '../../api/products';
-
+import { useState } from 'react';
+import { ModalCallback } from '../../components/ModalCallback/ModalCallback';
 
 
 export const HomePage = () => {
+  const [showModal, setShowModal] = useState(false);
 
   return (
     <section className='home'>
@@ -32,7 +33,7 @@ export const HomePage = () => {
                 Вирощуйте мікрозелень у себе дома за допомогою стелажа <span>Wonderwood</span>
               </h1>
               <div className="banner__button">
-                <Button title={'Детальніше'} />
+                <ButtonCallback title={'Детальніше'} />
               </div>
             </div>
 
@@ -43,7 +44,7 @@ export const HomePage = () => {
         </div>
       </section>
 
-      <section className="cards">
+      <section className="cards" id='cards'>
         <div className="container">
           <div className="cards__container">
             <div className="cards__title">
@@ -58,15 +59,20 @@ export const HomePage = () => {
         </div>
       </section>
 
-      <section className="callback">
+      <section className="callback" id='modal'>
         <div className="container">
           <div className="callback__container">
             <div className="callback__title">
               замовити <span>безкоштовну</span> консультацію
             </div>
-            <Button title={"Зворотній зв'язок"}/>
+            <ButtonCallback 
+              title={"Зворотній зв'язок"} 
+              onClick={() => setShowModal(true)} 
+            />
+            
+            <ModalCallback showModal={showModal} onClose={() => setShowModal(false)} />
+                
           </div>
-          
         </div>
       </section>
       
@@ -170,7 +176,7 @@ export const HomePage = () => {
               <div className="for__info-text">
                 Ми витратили багато часу та провели безліч експериментів для того, щоб зробити процес вирощування мікрозелені максимально простим. Це нам вдалося досягти за допомогою одноразових картриджів WonderWood. Тепер кожен зможе із задоволенням та з мінімальними зусиллями виростити смачний та соковитий microgreen.
               </div>
-              <Button title={'Переглянути стелажі'}/>
+              <ButtonCallback title={'Переглянути стелажі'}/>
             </div>
           </div>  
         </div>
@@ -188,7 +194,7 @@ export const HomePage = () => {
               <div className="upsell__text">
                 Ідеально підходить для тих, хто тільки хоче познайомитися з мікрозеленню та виростити свою першу культуру
               </div>
-              <Button title={'Замовити'} />
+              <ButtonCallback title={'Замовити'} />
             </div>
             
           </div>
@@ -202,7 +208,7 @@ export const HomePage = () => {
               <div className="upsell__text">
               Хочете одразу вирощувати та смакувати декілька microgreen одночасно? <br /> Тоді стелаж Т2 саме для Вас
               </div>
-              <Button title={'Замовити'} />
+              <ButtonCallback title={'Замовити'} />
             </div>
           </div>
         </div>
