@@ -8,7 +8,7 @@ export const ModalCallback = ({ onClose, showModal }) => {
   console.log(showModal);
 
   return createPortal(
-    <Transition in={showModal} timeout={100} relative mountOnEnter unmountOnExit>
+    <Transition in={showModal} timeout={500} relative mountOnEnter unmountOnExit>
       {state => (
         <>
         
