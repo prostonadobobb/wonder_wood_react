@@ -16,14 +16,12 @@ export const ModalCallback = ({ onClose, showModal }) => {
     setTimeout(() => {
       setError(false);
     }, 1000)
-    
   }
 
   return createPortal(
     <Transition in={showModal} timeout={500} relative mountOnEnter unmountOnExit>
       {state => (
         <>
-
           <div className={`modalCallback modalCallback-${state}`}>
             <div className={`modalCallback__content modalCallback__content-${state}`}>
               <button className="modalCallback__close" onClick={handleCloseModal}>
@@ -92,6 +90,5 @@ export const ModalCallback = ({ onClose, showModal }) => {
       )}
     </Transition>,
     document.getElementById('root')
-
   );
 };

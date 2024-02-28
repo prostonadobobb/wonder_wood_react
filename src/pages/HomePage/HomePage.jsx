@@ -14,11 +14,14 @@ import t2_upsell from './HomePageImg/t2_upsell.png';
 import products from '../../api/products';
 import { useState } from 'react';
 import { ModalCallback } from '../../components/ModalCallback/ModalCallback';
+import { ModalVideo } from '../../components/ModalVideo/ModalVideo';
 
 
 export const HomePage = () => {
   const [showModal, setShowModal] = useState(false);
-
+  const [showVideo, setShowVideo] = useState(false);
+  console.log(showVideo);
+  
   return (
     <section className='home'>
  
@@ -110,9 +113,10 @@ export const HomePage = () => {
               <div className="instruction__text">
                 Для твого домашнього сада достатньо запам'ятати пару простих кроків за допомогою нашої інструкції
               </div>
-              <ButtonPlay />
+              <ButtonPlay onClick={() => setShowVideo(true)}/>
+              <ModalVideo showVideo={showVideo} onClose={() => setShowVideo(false)} />
             </div>
-
+            
             <div className="instruction__image">
               <img src={instruction_image} alt="instruction-img" />
             </div>

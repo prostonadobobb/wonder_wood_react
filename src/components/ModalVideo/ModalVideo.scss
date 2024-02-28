@@ -1,0 +1,34 @@
+.video {
+  position: fixed;
+  width: 640px;
+  height: 360px;
+  z-index: 100;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  &__close {
+    display: inline-block;
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    background-color: #fff;
+    border: 2px solid #46A358;
+    padding: 10px;
+    transition: 0.3s;
+    border-radius: 50%;
+    line-height: 0;
+    cursor: pointer;
+
+    &:hover {
+      border-color: #46A358;
+      background: #46A358;
+    }
+
+    & svg {
+      width: 10px;
+      height: 10px;
+      transition: 0.3s;
+    }
+  }
+}  
