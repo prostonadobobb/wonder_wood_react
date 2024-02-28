@@ -1,7 +1,8 @@
 export const products = [
   {
-    id: 1, 
-    name: 'T1', 
+    age: 1, 
+    id: 'T1',
+    category: 'rack', 
     images: [
       '/t1-pdp1.png',
       '/t1-pdp2.png',
@@ -11,8 +12,9 @@ export const products = [
     price: 600,
   },
   {
-    id: 2, 
-    name: 'T2', 
+    age: 2, 
+    id: 'T2', 
+    category: 'rack',
     images: [
       '/t2-pdp1.png',
       '/t2-pdp2.png',

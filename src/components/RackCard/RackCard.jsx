@@ -10,12 +10,13 @@ export const RackCard = ({ product }) => {
   const BASE_URL = 'img/RackImg';
 
   const {
+    id,
     images,
     name, 
     price, 
     description
   } = product;
-
+  
   useEffect(() => {
     const intervalId = setInterval(() => {
       setCurrentImgIndex(prevIndex => (prevIndex + 1) % images.length);
@@ -56,7 +57,7 @@ export const RackCard = ({ product }) => {
 
         <div className="product__control">
           <div className="product__buttons">
-            <ButtonAbout title={'Детальніше'} />
+            <ButtonAbout id={id} title={'Детальніше'} />
             <ButtonBuy title={'Замовити'} />
           </div>
 

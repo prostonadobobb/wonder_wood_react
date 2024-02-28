@@ -5,6 +5,7 @@ import { ProductsPage } from './pages/ProductsPage/ProductsPage';
 import { InstructionPage } from './pages/InstructionPage/InstructionPage';
 import { CartridgesPage } from './pages/CartridgesPage/CartridgesPage';
 import { ContactsPage } from './pages/ContactsPage/ContactsPage';
+import { ProductDetailsPage } from './pages/ProductDetailsPage/ProductDetailsPage';
 
 export const Root = () => {
   return (
@@ -15,6 +16,7 @@ export const Root = () => {
 
         <Route path='products'>
           <Route index element={<ProductsPage />} />
+          <Route path=':productId' element={<ProductDetailsPage />} />
         </Route>
         <Route path='instruction'>
           <Route index element={<InstructionPage />} />

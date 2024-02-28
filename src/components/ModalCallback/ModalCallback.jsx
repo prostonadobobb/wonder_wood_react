@@ -77,7 +77,7 @@ export const ModalCallback = ({ onClose, showModal }) => {
                         minLength="10"
                       />
                     </label>
-                    <ButtonBuy onClick={handleSubmit} title={'Замовити'} />
+                    <ButtonBuy  title={'Замовити'} />
                   </form>
                 </>
               )}
