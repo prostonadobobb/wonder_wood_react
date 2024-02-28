@@ -56,10 +56,24 @@
     font-size: 1.625rem;
   }
 
+  &__form {
+    & label:nth-child(1) {
+      margin-bottom: 5px;
+    }
+  
+    & label:nth-child(2) {
+      margin-bottom: 30px;
+    }
+
+    & button {
+      padding: 15px 30px;
+    }
+  }
+ 
+
   &__label {
     display: flex;
     flex-direction: column;
-    margin-bottom: 0.4375rem;
     display: block;
     text-align: left;
     font-size: 1rem;
@@ -107,6 +121,24 @@
   &__form {
     display: flex;
     flex-direction: column;
+  }
+
+  &__error {
+    text-align: center;
+
+    &-title {
+      margin: 0 0 1.25rem;
+      font-size: 1.625rem;
+    }
+
+    &-text {
+      & a {
+        display: inline-block;
+        margin-top: 10px;
+        color: #46A358;
+        border-bottom: 1px solid #46A358;
+      }
+    }
   }
 }
 
