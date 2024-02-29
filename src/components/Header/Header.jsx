@@ -3,6 +3,7 @@ import './Header.scss';
 import logo from './HeaderImg/logo.png'
 import icon_home from './HeaderImg/icon-home.svg'
 import icon_phone from './HeaderImg/icon-phone.svg'
+import icon_basket from './HeaderImg/bascet-img.png';
 import { useCallback, useEffect, useRef, useState } from 'react';
 import classNames from 'classnames';
 
@@ -71,8 +72,18 @@ export const Header = () => {
               <NavLink to='cartridges' className={navbarLinkClass}>картриджі</NavLink>
               <NavLink to='contacts' className={navbarLinkClass}>контакти</NavLink>
             </div>
+
+            <div className='navbar__basket'>
+              <NavLink to='basket' className="navbar__basket-link">
+                <img src={icon_basket} alt="basket" className="basket__icon" />
+                <div className="navbar__basket-link--counter">
+                  <span className="navbar__basket-link--length">90</span>
+                </div>
+              </NavLink>
+            </div>
+
             <div className="navbar__contact">
-              <NavLink to={`tel: ${+380631001010}`} className="navbar__link-phone">
+              <NavLink to={`tel: ${+380631001010}`} className="navbar__contact-link">
                 <img src={icon_phone} alt="icon-phone" className="contact__icon" />
                 +3(063) 100-10-10
               </NavLink>

@@ -5,7 +5,7 @@ a {
 }
 
 .header {
-  padding: 30px 0;
+  padding: 15px 0;
   position: fixed;
   transition: 0.5s;
   width: 100%;
@@ -156,19 +156,56 @@ a {
       line-height: 1;
     }
   }
-}
 
-.contact {
-  font-size: 16px;
-
-  &__number {
+  &__contact {
+    font-size: 16px;
     display: flex;
     align-items: center;
 
+    &-link {
+      display: flex;
+      align-items: center;
+
+      & img {
+        display: block;
+        width: 24px;
+        margin-right: 8px;
+      }  
+    } 
   }
-  &__icon {
-    width: 24px;
-    margin-right: 8px;
+
+  &__basket {
+    margin-right: 30px;
+    transition: 0.5s;
+
+    &:hover {
+      transform: scale(1.2);
+    }
+
+    &-link {
+      position: relative;
+      & img {
+        display: block;
+        width: 50px;
+      }
+
+      &--counter {
+        position: absolute;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        background: #46A358;
+        top: 2px;
+        right: 50%;
+        transform: translateX(50%);
+        text-align: center;
+        color: #fff;
+        font-size: 12px;
+      }
+    }
   }
 }
 
@@ -246,6 +283,10 @@ a {
       margin: 0;
     }
 
+    &__contact-link {
+      padding: 16px 25px;
+    }
+
     &__link {
       width: 100%;
       padding: 16px 25px;
@@ -265,10 +306,6 @@ a {
       &.scroll::before {
         bottom: 0;
         height: 2px;
-      }
-
-      &-phone {
-        padding: 16px 25px;
       }
     }
   }

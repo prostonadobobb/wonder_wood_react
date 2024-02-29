@@ -6,6 +6,7 @@ import { InstructionPage } from './pages/InstructionPage/InstructionPage';
 import { CartridgesPage } from './pages/CartridgesPage/CartridgesPage';
 import { ContactsPage } from './pages/ContactsPage/ContactsPage';
 import { ProductDetailsPage } from './pages/ProductDetailsPage/ProductDetailsPage';
+import { BasketPage } from './pages/BasketPage/BasketPage';
 
 export const Root = () => {
   return (
@@ -27,6 +28,10 @@ export const Root = () => {
         <Route path='contacts'>
           <Route index element={<ContactsPage />} />
         </Route>
+        <Route path='basket'>
+          <Route index element={<BasketPage />} />
+        </Route>
+        
       </Route>
     </Routes>
     

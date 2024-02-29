@@ -2,7 +2,7 @@
 import './RackCard.scss';
 import { ButtonAbout } from '../ButtonAbout/ButtonAbout';
 import { ButtonBuy } from '../ButtonBuy/ButtonBuy';
-import { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import classNames from 'classnames';
 
 export const RackCard = ({ product }) => {
@@ -11,20 +11,19 @@ export const RackCard = ({ product }) => {
 
   const {
     id,
-    images,
-    name, 
+    images, 
     price, 
     description
   } = product;
+  // <---Потрібно потім переробити на слайдер, щоб не оновлювавався постійно компонент при виклику setInterval--->
+  // useEffect(() => {
+  //   const intervalId = setInterval(() => {
+  //     setCurrentImgIndex(prevIndex => (prevIndex + 1) % images.length);
+  //   }, 5000);
+
+  //   return () => clearInterval(intervalId);
+  // }, [images.length]);
   
-  useEffect(() => {
-    const intervalId = setInterval(() => {
-      setCurrentImgIndex(prevIndex => (prevIndex + 1) % images.length);
-    }, 5000);
-
-    return () => clearInterval(intervalId);
-  }, [images.length]);
-
   return (
     <div className="product">
       <div className="product__container">
@@ -52,13 +51,13 @@ export const RackCard = ({ product }) => {
           ))}
         </div>
 
-        <div className="product__title">{`стелаж ${name}`}</div>
+        <div className="product__title">{`стелаж ${id}`}</div>
         <div className="product__description">{description}</div>
 
         <div className="product__control">
           <div className="product__buttons">
-            <ButtonAbout id={id} title={'Детальніше'} />
-            <ButtonBuy title={'Замовити'} />
+            <ButtonAbout product={product} title={'Детальніше'} />
+            <ButtonBuy product={product} title={'Додати в кошик'} />
           </div>
 
           <div className="product__price">
