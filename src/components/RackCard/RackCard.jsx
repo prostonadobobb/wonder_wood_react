@@ -23,7 +23,7 @@ export const RackCard = ({ product }) => {
 
   //   return () => clearInterval(intervalId);
   // }, [images.length]);
-  
+
   return (
     <div className="product">
       <div className="product__container">

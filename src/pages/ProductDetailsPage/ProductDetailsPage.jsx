@@ -1,11 +1,11 @@
-import "./ProductDetailsPage.scss";
 import { useEffect, useState } from "react";
+import "./ProductDetailsPage.scss";
 import { useParams } from "react-router-dom";
 import products from "../../api/products";
 
 export const ProductDetailsPage = () => {
   const { productId } = useParams();
-  const [product, setProduct] = useState({});
+  const [product, setProduct] = useState();
 
   useEffect(() => {
     setProduct(products.find(product => product.id === productId));
@@ -18,7 +18,14 @@ export const ProductDetailsPage = () => {
     <section className="details">
       <div className="container">
         <div className="details__container">
-
+          <div>{product?.description}</div>
+          <div>{product?.description}</div>
+          <div>{product?.description}</div>
+          <div>{product?.description}</div>
+          <div>{product?.description}</div>
+          <div>{product?.description}</div>
+          <div>{product?.description}</div>
+          <div>{product?.description}</div>
         </div>
       </div>
     </section>
