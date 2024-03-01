@@ -20,8 +20,14 @@ import { ModalVideo } from '../../components/ModalVideo/ModalVideo';
 export const HomePage = () => {
   const [showModal, setShowModal] = useState(false);
   const [showVideo, setShowVideo] = useState(false);
-  console.log(showVideo);
   
+  const scrollTo = () => {
+    const elem = document.getElementById("cards");
+    if(elem) {
+      elem.scrollIntoView({behavior: "smooth", block: "start" })
+    };
+  };
+
   return (
     <section className='home'>
  
@@ -36,7 +42,7 @@ export const HomePage = () => {
                 Вирощуйте мікрозелень у себе дома за допомогою стелажа <span>Wonderwood</span>
               </h1>
               <div className="banner__button">
-                <ButtonCallback title={'Детальніше'} />
+                <ButtonCallback onClick={scrollTo} title={'Детальніше'} />
               </div>
             </div>
 

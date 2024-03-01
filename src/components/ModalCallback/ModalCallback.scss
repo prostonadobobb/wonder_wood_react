@@ -13,18 +13,27 @@
   opacity: 0;
   top: 0;
   left: 0;
-  transition: opacity 0.5s linear;
+  transition: opacity 0.5s ease;
   z-index: 200;
   top: 50%;
   left: 50%;
-  
-  &-entered {
-    opacity: 1;
+
+  &-entering {
+    opacity: 1; // opacity переходу
   }
 
-  // &-exiting {
-  //  opacity: 0;
-  // }
+  &-entered {
+    opacity: 1; // фіксація opacity
+  }
+
+  &-exiting {
+    opacity: 0; // opacity переходу
+  }
+
+  &-exited {
+    opacity: 0; // фіксація opacity
+  }
+  
 
   &__content {
     position: relative;
@@ -38,18 +47,7 @@
     background: #fff;
     margin: auto;
     box-shadow: 0 0 15px 1px rgba(96, 155, 170, 0.5);
-
-  }
-
-  &--entering {
-    opacity: 0;
-  }
-
-  &--entered {
-    transition: opacity 0.3s ease-in-out;
-    opacity: 1;
-  }
-   
+  }   
 
   &__title {
     margin-bottom: 1.25rem;
@@ -83,7 +81,7 @@
     border-radius: 3px;
     width: 100%;
     border: 2px solid #46A358;
-    transition: 0.5s;
+    transition: 0.3s;
     padding: 10px 15px;
 
     &:focus {

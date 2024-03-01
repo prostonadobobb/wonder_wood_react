@@ -66,6 +66,11 @@
     margin-top: 25px;
   }
 
+  &__buttons {
+    display: flex;
+    gap: 1px;
+  }
+
   &__price {
     font-weight: 600;
     font-size: 36px;

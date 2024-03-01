@@ -1,4 +1,4 @@
-import { NavLink } from 'react-router-dom';
+import { NavLink, useLocation } from 'react-router-dom';
 import './Header.scss';
 import logo from './HeaderImg/logo.png'
 import icon_home from './HeaderImg/icon-home.svg'
@@ -8,31 +8,44 @@ import { useCallback, useEffect, useRef, useState } from 'react';
 import classNames from 'classnames';
 
 export const Header = () => {
-  const [isScrolled, setIsScrolled] = useState(false);
+  const location = useLocation();
+  const [isScrolled, setIsScrolled] = useState(null);
   const [openBurger, setOpenBurger] = useState(false);
   const navRef = useRef(null);
   const navbarLinkClass = classNames("navbar__link", {"scroll": isScrolled});
+  console.log(location.pathname, isScrolled);
 
-  const handleScroll = useCallback(() => {
+  const handleScroll = useCallback(() => {  
     const shouldScroll = window.scrollY > 30;
+   
     if (isScrolled !== shouldScroll) {
       setIsScrolled(shouldScroll);
     }
   }, [isScrolled]);
+
+  useEffect(() => {
+    if (location.pathname === "/") {   
+      window.addEventListener('scroll', handleScroll);
+
+      return () => {
+        window.removeEventListener('scroll', handleScroll);
+      };
+    } else {
+      setIsScrolled(true);
+    }
+  }, [handleScroll, location.pathname]);
   
   useEffect(() => {
-    window.addEventListener('scroll', handleScroll);
-  
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-    };
-  }, [handleScroll]);
-  
+    if (location.pathname === "/" && window.scrollY < 30) {
+      setIsScrolled(false);
+    }
+  }, [location.pathname]);
+
   const handleClickOutside = useCallback((e) => {
     if (!navRef.current.contains(e.target)) {
       setOpenBurger(false);
     }
-  }, []);
+  }, [navRef, setOpenBurger]);
   
   useEffect(() => {
     document.addEventListener('click', handleClickOutside);
@@ -41,7 +54,7 @@ export const Header = () => {
       document.removeEventListener('click', handleClickOutside);
     };
   }, [handleClickOutside]);
-  
+
 
   return (
     <section className={classNames("header", {"scroll": isScrolled})}>
