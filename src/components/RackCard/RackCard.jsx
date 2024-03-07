@@ -2,11 +2,11 @@
 import './RackCard.scss';
 import { ButtonAbout } from '../ButtonAbout/ButtonAbout';
 import { ButtonBuy } from '../ButtonBuy/ButtonBuy';
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import classNames from 'classnames';
 
 export const RackCard = ({ product }) => {
-  const [currentImgIndex, setCurrentImgIndex] = useState(0);
+  const [currentImg, setCurrentImg] = useState('');
   const BASE_URL = 'img/RackImg';
 
   const {
@@ -15,6 +15,10 @@ export const RackCard = ({ product }) => {
     price, 
     description
   } = product;
+
+  useEffect(() => {
+    setCurrentImg(images[0])
+  }, [images])
   // <---Потрібно потім переробити на слайдер, щоб не оновлювавався постійно компонент при виклику setInterval--->
   // useEffect(() => {
   //   const intervalId = setInterval(() => {
@@ -29,18 +33,18 @@ export const RackCard = ({ product }) => {
       <div className="product__container">
         
         <div className='product__img-current'>
-          <img src={`${BASE_URL}${images[currentImgIndex]}`} alt="img__item" />
+          <img src={`${BASE_URL}${currentImg}`} alt="img__item" />
         </div>
 
         <div className="product__img-list">
-          {images.map((image, index) => (
+          {images.map((image) => (
             <button 
               className={classNames("product__img-btn", {
-                "product__img-btn--active": index === currentImgIndex,
+                "product__img-btn--active": image === currentImg,
               })}
               type='button'
               key={image}
-              onClick={() => setCurrentImgIndex(index)}
+              onClick={() => setCurrentImg(image)}
             >
               <img 
                 src={`${BASE_URL}${image}`} 

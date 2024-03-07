@@ -13,7 +13,6 @@ export const Header = () => {
   const [openBurger, setOpenBurger] = useState(false);
   const navRef = useRef(null);
   const navbarLinkClass = classNames("navbar__link", {"scroll": isScrolled});
-  console.log(location.pathname, isScrolled);
 
   const handleScroll = useCallback(() => {  
     const shouldScroll = window.scrollY > 30;
