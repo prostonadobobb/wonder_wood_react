@@ -1,4 +1,4 @@
-import products from '../../api/products';
+import rack from '../../api/rack';
 import { RackCard } from '../../components/RackCard/RackCard';
 import './ProductsPage.scss';
 
@@ -8,7 +8,7 @@ export const ProductsPage = () => {
     <section className="products">
       <div className="container">
         <div className="products__list">
-          {products.map(product => (
+          {rack.map(product => (
             <RackCard key={product.id} product={product} />
           ))}
         </div>

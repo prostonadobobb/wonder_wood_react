@@ -1,7 +1,7 @@
-import cartridges from '../../api/cartridges';
+
 import { ButtonCallback } from '../../components/ButtonCallback/ButtonCallback';
 import { ButtonPlay } from '../../components/ButtonPlay/ButtonPlay';
-import { CartridgeCard } from '../../components/CartridgeCard/CartridgeCard';
+
 import { RackCard } from '../../components/RackCard/RackCard';
 import './HomePage.scss';
 import banner_img from './HomePageImg/jumb-shelv.png';
@@ -11,7 +11,7 @@ import advantage_2 from './HomePageImg/advantage2.svg';
 import advantage_3 from './HomePageImg/advantage3.svg';
 import t1_upsell from './HomePageImg/t1_upsell.png';
 import t2_upsell from './HomePageImg/t2_upsell.png';
-import products from '../../api/products';
+import products from '../../api/rack';
 import { useState } from 'react';
 import { ModalCallback } from '../../components/ModalCallback/ModalCallback';
 import { ModalVideo } from '../../components/ModalVideo/ModalVideo';
@@ -126,16 +126,6 @@ export const HomePage = () => {
             <div className="instruction__image">
               <img src={instruction_image} alt="instruction-img" />
             </div>
-          </div>
-        </div>
-      </section>
-
-      <section className="cartridges"> 
-        <div className="container">
-          <div className="cartridges__container">
-            {cartridges.map(cartridge => (
-              <CartridgeCard cartridge={cartridge} key={cartridge.id} />
-            ))}  
           </div>
         </div>
       </section>

@@ -1,0 +1,47 @@
+.imageSlider {
+  text-align: center;
+  padding: 35px 0;
+  background: rgba(96, 155, 170, 0.07);
+  border-radius: 15px;
+
+  & img {
+    height: 320px;
+  }
+
+  & .splide__pagination {
+    bottom: -45px;
+    padding: 0;
+    height: 2px;
+
+    & li {
+      flex: 1;
+      line-height: 0;
+  
+      & .splide__pagination__page {
+        border-radius: 0;
+        height: 4px;
+        width: 100%;
+        margin: 0;
+        display: block;
+  
+        &.is-active {
+          transform: scale(1);
+          background: #46A358;
+        }
+      }
+    }
+  }
+
+  & .splide__progress {
+    position: absolute;
+    top: -35px;
+    left: 12px;
+    right: 12px;
+   
+    &__bar {
+     height: 4px;
+     background: rgba(84, 142, 157, 0.07);
+     }
+   }
+}
+

@@ -53,8 +53,8 @@
 
   &__list {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 60px;
+    grid-template-columns: repeat(auto-fit, minmax(480px, 1fr));
+    gap: 20px;
   }
 
   &__container {
@@ -244,10 +244,6 @@
       max-height: 100%;
     }
   } 
-}
-
-.cartridges {
-  padding: 80px 0 50px;
 }
 
 .for {

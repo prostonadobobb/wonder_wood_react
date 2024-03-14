@@ -1,6 +1,6 @@
 import "./ProductDetailsPage.scss";
 import { useParams } from "react-router-dom";
-import products from "../../api/products";
+import rack from "../../api/rack";
 import { useEffect, useState } from "react";
 import classNames from "classnames";
 import { ButtonBuy } from "../../components/ButtonBuy/ButtonBuy";
@@ -8,7 +8,7 @@ import { ButtonBuy } from "../../components/ButtonBuy/ButtonBuy";
 export const ProductDetailsPage = () => {
   const [currentImg, setCurrentImg] = useState('');
   const { productId } = useParams();
-  const findProductById = products.find(product => product.id === productId);
+  const findProductById = rack.find(product => product.id === productId);
   const BASE_URL = 'img/RackImg';
 
   const { 

@@ -5,9 +5,9 @@ export const ButtonAbout = ({ product, title }) => {
 
   return (
     <button className="button_desc">
-      {product && (
+      {
         <Link to={`/products/${product.id}`} >{title}</Link>  
-      )}
+      }
       
     </button>
   );
