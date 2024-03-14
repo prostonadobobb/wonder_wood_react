@@ -4,6 +4,8 @@ import { Splide, SplideSlide, SplideTrack } from '@splidejs/react-splide';
 
 export const ImageSlider = ({ images }) => {
   const BASE_URL = 'img/RackImg';
+  
+  console.log(BASE_URL);
 
   return (
     <div className='imageSlider'>

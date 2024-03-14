@@ -6,7 +6,7 @@ export const ButtonAbout = ({ product, title }) => {
   return (
     <button className="button_desc">
       {
-        <Link to={`/products/${product.id}`} >{title}</Link>  
+        <Link to={`/${product.category}/${product.id}`} >{title}</Link>  
       }
       
     </button>

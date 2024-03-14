@@ -3,11 +3,9 @@ import './RackCard.scss';
 import { ButtonAbout } from '../ButtonAbout/ButtonAbout';
 import { ButtonBuy } from '../ButtonBuy/ButtonBuy';
 import React from 'react';
-
 import { ImageSlider } from '../ImageSlider/ImageSlider';
 
 export const RackCard = ({ product }) => {
-  
 
   const {
     id,
@@ -15,7 +13,7 @@ export const RackCard = ({ product }) => {
     price, 
     description
   } = product;
-  
+
   return (
     <div className="product">
       <div className="product__container">
@@ -25,7 +23,6 @@ export const RackCard = ({ product }) => {
         <div className="product__info">
           <div className="product__title">{`стелаж ${id}`}</div>
           <div className="product__description">{description}</div>
-
           <div className="product__control">
             <div className="product__buttons">
               <ButtonAbout product={product} title={'Детальніше'} />

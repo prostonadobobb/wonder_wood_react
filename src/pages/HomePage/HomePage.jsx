@@ -11,7 +11,7 @@ import advantage_2 from './HomePageImg/advantage2.svg';
 import advantage_3 from './HomePageImg/advantage3.svg';
 import t1_upsell from './HomePageImg/t1_upsell.png';
 import t2_upsell from './HomePageImg/t2_upsell.png';
-import products from '../../api/rack';
+import products from '../../api/products';
 import { useState } from 'react';
 import { ModalCallback } from '../../components/ModalCallback/ModalCallback';
 import { ModalVideo } from '../../components/ModalVideo/ModalVideo';
@@ -27,6 +27,10 @@ export const HomePage = () => {
       elem.scrollIntoView({behavior: "smooth", block: "start" })
     };
   };
+
+  const rackProducts = products.filter(product => (
+    product.category === 'racks'
+  ))
 
   return (
     <section className='home'>
@@ -60,7 +64,7 @@ export const HomePage = () => {
                 Стелаж WonderWood
             </div>
             <div className="cards__list">
-              {products.map(product => (
+              {rackProducts.map(product => (
                 <RackCard product={product} key={product.id} />
               ))}             
             </div>

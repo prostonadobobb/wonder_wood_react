@@ -1,6 +1,6 @@
 import "./ProductDetailsPage.scss";
 import { useParams } from "react-router-dom";
-import rack from "../../api/rack";
+import products from "../../api/products";
 import { useEffect, useState } from "react";
 import classNames from "classnames";
 import { ButtonBuy } from "../../components/ButtonBuy/ButtonBuy";
@@ -8,7 +8,9 @@ import { ButtonBuy } from "../../components/ButtonBuy/ButtonBuy";
 export const ProductDetailsPage = () => {
   const [currentImg, setCurrentImg] = useState('');
   const { productId } = useParams();
-  const findProductById = rack.find(product => product.id === productId);
+  
+
+  const findProductById = products.find(product => product.id === productId);
   const BASE_URL = 'img/RackImg';
 
   const { 
@@ -18,13 +20,11 @@ export const ProductDetailsPage = () => {
     kit,
   } = findProductById;
 
-  Object.entries(kit).map(([key, value]) => (
-    console.log(key,value)
-  ))
-
   useEffect(() => {
     setCurrentImg(images[0]);
   }, [images])
+
+  console.log(`${BASE_URL}${currentImg}`)
 
   return ( 
     <section className="details">

@@ -1,7 +1,7 @@
 import { Routes, Route, useLocation } from 'react-router-dom';
 import { App } from './App';
 import { HomePage } from './pages/HomePage/HomePage';
-import { ProductsPage } from './pages/ProductsPage/ProductsPage';
+import { RackPage } from './pages/RackPage/RackPage';
 import { InstructionPage } from './pages/InstructionPage/InstructionPage';
 import { CartridgesPage } from './pages/CartridgesPage/CartridgesPage';
 import { ContactsPage } from './pages/ContactsPage/ContactsPage';
@@ -29,8 +29,8 @@ export const Root = () => {
 
           <Route index element={<HomePage />} />
 
-          <Route path='products'>
-            <Route index element={<ProductsPage />} />
+          <Route path='racks'>
+            <Route index element={<RackPage />} />
             <Route path=':productId' element={<ProductDetailsPage />} />
           </Route>
           <Route path='instruction'>
@@ -38,6 +38,7 @@ export const Root = () => {
           </Route>
           <Route path='cartridges'>
             <Route index element={<CartridgesPage />} />
+            <Route path=':productId' element={<ProductDetailsPage />} />
           </Route>
           <Route path='contacts'>
             <Route index element={<ContactsPage />} />

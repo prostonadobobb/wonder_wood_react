@@ -79,7 +79,7 @@ export const Header = () => {
               <NavLink to='/' className={navbarLinkClass}>
                 <img src={icon_home} alt="icon__home" className='navbar__icon' />
               </NavLink>
-              <NavLink to='products' className={navbarLinkClass}>стелажі</NavLink>
+              <NavLink to='racks' className={navbarLinkClass}>стелажі</NavLink>
               <NavLink to='instruction' className={navbarLinkClass}>інструкція</NavLink>
               <NavLink to='cartridges' className={navbarLinkClass}>картриджі</NavLink>
               <NavLink to='contacts' className={navbarLinkClass}>контакти</NavLink>
