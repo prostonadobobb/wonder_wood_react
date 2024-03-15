@@ -5,8 +5,8 @@ import { ButtonBuy } from "../ButtonBuy/ButtonBuy";
 
 export const CartridgeCard = ({ product }) => {
   
-  const BASE_URL = 'img/RackImg';
-
+  const BASE_URL = 'img/ProductsImg';
+  
   return (
     <div className="cartridge">
       <div className="cartridge__container">

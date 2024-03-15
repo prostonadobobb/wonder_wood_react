@@ -1,3 +1,9 @@
 .cartridges {
   padding: 80px 0 50px;
+
+  &__container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-items: center;
+  }
 }

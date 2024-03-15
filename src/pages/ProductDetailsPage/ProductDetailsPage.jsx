@@ -11,7 +11,7 @@ export const ProductDetailsPage = () => {
   
 
   const findProductById = products.find(product => product.id === productId);
-  const BASE_URL = 'img/RackImg';
+  const BASE_URL = 'img/ProductsImg';
 
   const { 
     images, 
@@ -23,8 +23,8 @@ export const ProductDetailsPage = () => {
   useEffect(() => {
     setCurrentImg(images[0]);
   }, [images])
-
-  console.log(`${BASE_URL}${currentImg}`)
+  
+console.log(images.length);
 
   return ( 
     <section className="details">
@@ -38,6 +38,7 @@ export const ProductDetailsPage = () => {
 
             <div className="details__img--list">
               {images.map((image) => (
+                
                 <button 
                   className={classNames("details__img--btn", {
                     "details__img--btn-active": image === currentImg,
@@ -52,6 +53,7 @@ export const ProductDetailsPage = () => {
                     className="details__img-small" 
                   />
                 </button>
+
               ))}
             </div>
           </div>

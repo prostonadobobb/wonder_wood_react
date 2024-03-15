@@ -3,7 +3,7 @@ import '@splidejs/react-splide/css';
 import { Splide, SplideSlide, SplideTrack } from '@splidejs/react-splide';
 
 export const ImageSlider = ({ images }) => {
-  const BASE_URL = 'img/RackImg';
+  const BASE_URL = 'img/ProductsImg';
   
   console.log(BASE_URL);
 
