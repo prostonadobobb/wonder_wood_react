@@ -34,7 +34,6 @@ export const RackCard = ({ product }) => {
             </div>
           </div>
         </div>
-
       </div>      
     </div>   
   );

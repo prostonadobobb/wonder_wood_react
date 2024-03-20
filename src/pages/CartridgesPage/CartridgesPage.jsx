@@ -13,7 +13,7 @@ export const CartridgesPage = () => {
   return (
     <section className="cartridges"> 
     <div className="container">
-      <div className="cartridges__container">
+      <div className="cartridges__list">
         {cartridgesProducts.map(cartridge => (
           <CartridgeCard key={cartridge.id} product={cartridge} />
         ))}  

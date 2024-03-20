@@ -8,23 +8,20 @@ import { ButtonBuy } from "../../components/ButtonBuy/ButtonBuy";
 export const ProductDetailsPage = () => {
   const [currentImg, setCurrentImg] = useState('');
   const { productId } = useParams();
-  
-
   const findProductById = products.find(product => product.id === productId);
   const BASE_URL = 'img/ProductsImg';
 
   const { 
-    images, 
-    id, 
+    name,
+    images,
     description,
     kit,
+    category,
   } = findProductById;
 
   useEffect(() => {
     setCurrentImg(images[0]);
   }, [images])
-  
-console.log(images.length);
 
   return ( 
     <section className="details">
@@ -60,7 +57,7 @@ console.log(images.length);
           
           <div className="details__info">
             <div className="details__info--title">
-              {`Стелаж WonderWood ${id}`}
+              {category === 'cartridges'?`Картридж WonderWood ${name}` : `Стелаж WonderWood ${name}`}
             </div>
 
             <div className="details__info--description">

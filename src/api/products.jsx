@@ -4,20 +4,20 @@ export const products = [
     category: "cartridges",
     name: "горох",
     price: "50",
-    kit: ["картридж"],
+    kit: {"Картридж": "1 шт."},
     images: [
       "/goroh.jpg",
       "/goroh1.jpg",
       "/goroh2.jpg"
     ],
-    description: "це горох",
+    description: "Мікрозелень гороху є багатим джерелом фітоестрогенів. Ці сполуки рослинного походження часто відомі через здатність знижувати ризик раку молочної залози, серцевих захворювань та остеопорозу.",
   },
   {
     id: "nasturtium",
     category: "cartridges",
     name: "настурція",
     price: "50",
-    kit: ["картридж"],
+    kit: {"Картридж": "1 шт."},
     images: [
       "/nast1.jpg",
       "/nast2.jpg",
@@ -31,7 +31,7 @@ export const products = [
     category: "cartridges",
     name: "редиска",
     price: "50",
-    kit: ["картридж"],
+    kit: {"Картридж": "1 шт."},
     images: [
       "/redis1.jpg",
       "/redis2.jpg",
@@ -45,7 +45,7 @@ export const products = [
     category: "cartridges",
     name: "кресс-салат",
     price: "50",
-    kit: ["картридж"],
+    kit: {"Картридж": "1 шт."},
     images: [
       "/cress1.jpg",
       "/cress2.jpg"
@@ -57,7 +57,7 @@ export const products = [
     category: "cartridges",
     name: "гірчиця",
     price: "50",
-    kit: ["картридж"],
+    kit: {"Картридж": "1 шт."},
     images: [
       "/girch1.jpg",
       "/girch2.jpg",
@@ -66,8 +66,8 @@ export const products = [
     description: "це гірчиця",
   },
   {
-    age: 1, 
     id: "T1",
+    name: "T1",
     category: "racks", 
     images: [
       "/t1-pdp1.png",
@@ -87,8 +87,8 @@ export const products = [
     power: 3,
   },
   {
-    age: 2, 
     id: "T2", 
+    name: "T2",
     category: "racks",
     images: [
       "/t2-pdp1.png",
