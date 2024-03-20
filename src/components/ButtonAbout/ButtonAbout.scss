@@ -1,4 +1,4 @@
-.button_desc {
+.button__desc {
   outline: none;
   text-align: center;
   cursor: pointer;
@@ -9,6 +9,7 @@
   box-shadow: 0px 10px 30px -4px rgba(10, 19, 40, 0.39);
   transform: skew(-8deg);
   font-size: 16px;
+  padding: 0;
   
   border: 2px solid #46A358;
   border-radius: 2px 20px 2px 20px;

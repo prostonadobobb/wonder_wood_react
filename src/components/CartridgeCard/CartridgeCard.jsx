@@ -24,19 +24,17 @@ export const CartridgeCard = ({ product }) => {
         
         <div className="cartridge__head">
           <div className="cartridge__title">{name}</div>
-          <div className="cartridge__description">{description}</div>
-          <div className="cartridge__control">
-            <div className="cartridge__buttons">
-              <ButtonAbout product={product} title={'Детальніше'} />
-              <ButtonBuy title={'Замовити'} />
-            </div>
-
-            <div className="cartridge__price">
+          <div className="cartridge__price">
               {`${price}₴`}
-            </div>
           </div>
+        </div> 
+        <div className="cartridge__description">{description}</div>
+        <div className="cartridge__buttons">
+          <ButtonAbout product={product} title={'Детальніше'} />
+          <ButtonBuy title={'Замовити'} />
         </div>
-      </div>      
+      </div>
+           
     </div>   
   );
 };

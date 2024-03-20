@@ -5,15 +5,12 @@
   &__title {
     font-weight: 500;
     font-size: 24px;
-    line-height: 1.6;
     margin-top: 30px;
     text-transform: uppercase;
   }
 
   &__description {
     font-weight: 500;
-    margin-top: 5px;
-    line-height: 1.6;
     color: #727272;
     min-height: 50px;
   }
@@ -22,7 +19,6 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    line-height: 1.6;
     margin-top: 25px;
   }
 
@@ -33,7 +29,7 @@
 
   &__price {
     font-weight: 600;
-    font-size: 36px;
+    font-size: 24px;
   }
 }
 

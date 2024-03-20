@@ -4,7 +4,7 @@ import './ButtonAbout.scss';
 export const ButtonAbout = ({ product, title }) => {
 
   return (
-    <button className="button_desc">
+    <button className="button__desc">
       {
         <Link to={`/${product.category}/${product.id}`} >{title}</Link>  
       }
